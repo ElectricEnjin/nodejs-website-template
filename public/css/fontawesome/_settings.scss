@@ -1,0 +1,14 @@
+// FontAwesome default settings
+@import "../../vendor/fontawesome-4.4.0/scss/variables";
+
+// Custom settings
+$fa-font-path:        "../vendor/fontawesome-4.4.0/fonts";
+
+// Map of used FontAwesome icons
+$icons: (
+	bars: $fa-var-bars,
+	facebook-square: $fa-var-facebook-square,
+	twitter-square: $fa-var-twitter-square,
+	google-plus-square: $fa-var-google-plus-square,
+	envelope-square: $fa-var-envelope-square
+);

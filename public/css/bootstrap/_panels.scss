@@ -1,0 +1,8 @@
+.panel.variation-secondary, .variation-secondary .panel {
+	background-color: $navbar-inverse-bg;
+	border-color: $navbar-inverse-border;
+	
+	label {
+		color: $navbar-inverse-color;
+	}
+}

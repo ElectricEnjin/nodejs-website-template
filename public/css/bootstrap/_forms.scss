@@ -1,0 +1,10 @@
+
+// Variations
+form.variation-secondary, .variation-secondary form {
+	background-color: $navbar-inverse-bg;
+	border-color: $navbar-inverse-border;
+	
+	label {
+		color: $navbar-inverse-color;
+	}
+}

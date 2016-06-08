@@ -1,0 +1,9 @@
+<layout-use template="./base.marko.html">
+    <layout-put into="title"><layout-placeholder name="title"/></layout-put>
+    <layout-put into="description"><layout-placeholder name="description"/></layout-put>
+    <layout-put into="body">
+   		<app-header nav="${data.nav}"></app-header>
+		<layout-placeholder name="content"/>
+   		<app-footer nav="${data.nav}"></app-footer>
+	</layout-put>
+</layout-use>

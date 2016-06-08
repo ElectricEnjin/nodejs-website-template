@@ -1,0 +1,33 @@
+{
+  "name": "animate.css-scss",
+  "version": "3.1.0",
+  "homepage": "https://github.com/geoffgraham/animate.scss",
+  "authors": [
+    "geoffgraham <geoff@geoffgraham.me>"
+  ],
+  "description": "An up to date port of Dan Eden's Animate.css to SASS",
+  "main": [
+    "animate.scss"
+  ],
+  "keywords": [
+    "animate.scss",
+    "animate.css",
+    "animate"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "3.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.1.0",
+    "commit": "3dbba630655cae2f78c956582668fcd3ddb8d263"
+  },
+  "_source": "git://github.com/Igosuki/animate.scss.git",
+  "_target": "~3.1.0",
+  "_originalSource": "animate.css-scss"
+}

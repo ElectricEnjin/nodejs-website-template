@@ -1,0 +1,30 @@
+<layout-use template="../layouts/single-column-layout.marko.html">
+	
+	<layout-put into="title">My Page Test</layout-put>
+	<layout-put into="description">My Page Test Description</layout-put>
+	
+	<layout-put into="content">
+		<app-jumbotron></app-jumbotron>
+		<div class="container">
+			<div class="col-lg-4">
+				<app-thumbnail label="Thumbnail 1"></app-thumbnail>
+			</div>
+			<div class="col-lg-4">
+				<app-thumbnail label="Thumbnail 2"></app-thumbnail>
+			</div>
+			<div class="col-lg-4">
+				<app-thumbnail label="Thumbnail 3"></app-thumbnail>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-lg-6">
+				<app-form></app-form>
+			</div>
+			<div class="col-lg-6">
+				<app-form variation="secondary" layout="horizontal"></app-form>
+			</div>
+		</div>
+	</layout-put>
+
+</layout-use>
+

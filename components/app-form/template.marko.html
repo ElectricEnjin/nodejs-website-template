@@ -1,0 +1,39 @@
+<div class="panel panel-default variation-${data.variation ? data.variation : 'default'}">
+	<div class="panel-heading">
+		<h3 class="panel-title">Panel title</h3>
+	</div>
+	<div class="panel-body">
+		<form class="${data.layout ? 'form-' + data.layout : ''}">
+			<var name="labelCol" value="data.layout == 'horizontal' ? 'col-sm-3' : ''" />
+			<var name="controlCol" value="data.layout == 'horizontal' ? 'col-sm-9' : ''" />
+			<div class="form-group">
+				<label class="${labelCol} control-label" for="exampleInputEmail1">Email address</label>
+				<div class="${controlCol}">
+					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="${labelCol} control-label" for="exampleInputPassword1">Password</label>
+				<div class="${controlCol}">
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="${labelCol} control-label" for="exampleInputFile">File input</label>
+				<div class="${controlCol}">
+					<input type="file" id="exampleInputFile">
+					<p class="help-block">Example block-level help text here.</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="${labelCol}"></div>
+				<div class="${controlCol}">
+					<div class="checkbox">
+						<label><input type="checkbox">Check me out</label>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</div>

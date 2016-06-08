@@ -1,0 +1,20 @@
+// Our settings
+@import "settings";
+// Required
+@import "../../vendor/fontawesome-4.4.0/scss/path";
+@import "../../vendor/fontawesome-4.4.0/scss/core";
+
+// Optional - Uncomment what is needed
+//@import "../../vendor/fontawesome-4.4.0/scss/mixins";
+@import "../../vendor/fontawesome-4.4.0/scss/larger";
+//@import "../../vendor/fontawesome-4.4.0/scss/fixed-width";
+//@import "../../vendor/fontawesome-4.4.0/scss/list";
+//@import "../../vendor/fontawesome-4.4.0/scss/bordered-pulled";
+//@import "../../vendor/fontawesome-4.4.0/scss/animated";
+//@import "../../vendor/fontawesome-4.4.0/scss/rotated-flipped";
+//@import "../../vendor/fontawesome-4.4.0/scss/stacked";
+
+
+@each $name, $code in $icons {
+.#{$fa-css-prefix}-#{$name}:before { content: $code; }
+}
