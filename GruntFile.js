@@ -9,24 +9,25 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-modernizr');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-lodash');
+	grunt.loadNpmTasks('grunt-githooks');
 
 	function getModernizrVersion() {
-		var packageJson = require('./node_modules/grunt-modernizr/node_modules/customizr/node_modules/modernizr/package.json');
-		
+		var packageJson = require('./node_modules/modernizr/package.json');
+
 		return packageJson.version;
 	}
 
 	function getLodashVersion() {
-		var packageJson = require('./node_modules/lodash-cli/node_modules/lodash-compat/package.json');
-		
+		var packageJson = require('./node_modules/grunt-lodash/node_modules/lodash/package.json');
+
 		return packageJson.version;
 	}
-	
+
 	var config = {
 		modernizrVersion: getModernizrVersion(),
 		lodashVersion: getLodashVersion()
 	};
-	
+
 	grunt.initConfig({
 		config: config,
 		clean: {
@@ -39,7 +40,7 @@ module.exports = function(grunt) {
 				      ]
 			}
 		},
-	
+
 		sass: {
 			common: {
 				files: [{
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		
+
 		cssmin: {
 			minify: {
 				options: {
@@ -68,7 +69,7 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		
+
         postcss: {
             options: {
                 map: true,
@@ -80,7 +81,7 @@ module.exports = function(grunt) {
                 src: './public/css/*.css'
             }
         },
-		
+
 		uglify: {
 			minify: {
 				options: {
@@ -91,7 +92,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		modernizr: {
 			dist: {
 				dest : "public/vendor/modernizr-<%= config.modernizrVersion %>/modernizr-custom.js",
@@ -105,18 +106,17 @@ module.exports = function(grunt) {
 	          	uglify : false
 			}
 		},
-		
+
 		lodash: {
 			target: {
 				dest: 'public/vendor/lodash-<%= config.lodashVersion %>/lodash-custom.js'
 			},
 			options: {
-				modifier: 'modern',
 				include: ['throttle'],
 				shortFlags: ['d','m']
 			}
 		},
-		
+
 		watch: {
 			options: {
 				livereload: true,
@@ -133,13 +133,13 @@ module.exports = function(grunt) {
 				tasks: []
 			}
 		},
-		
+
 		githooks: {
 			all: {
 				'post-merge': 'default',
 			}
 		}
 	});
-  
+
   grunt.registerTask('default', ['clean', 'sass', 'cssmin', 'postcss', 'modernizr', 'lodash', 'uglify']);
 }
